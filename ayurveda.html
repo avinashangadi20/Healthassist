@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayurveda</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    color: #005f3c;
+    text-align: center;
+}
+
+a {
+    color: #00796b;
+    text-decoration: none;
+}
+
+/* Navbar Styles */
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #1a1a1a;
+    padding: 15px 30px;
+    border-bottom: 3px solid #ff5f00;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo and Brand */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ff5f00;
+    text-decoration: none;
+}
+
+.navbar-brand:hover {
+    color: #ff7f32;
+}
+
+.navbar-logo {
+    height: 40px;
+    margin-right: 10px;
+}
+
+/* Navbar Links */
+.navbar-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-link {
+    font-size: 1rem;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background-color: #ff5f00;
+    color: #ffffff;
+}
+
+/* Search Bar */
+.form-control {
+    padding: 8px 12px;
+    border: 1px solid #ff5f00;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #000000;
+    outline: none;
+    font-size: 1rem;
+}
+
+.form-control::placeholder {
+    color: #888;
+}
+
+.form-control:focus {
+    border: 2px solid #ff7f32;
+}
+
+.btn-outline-success {
+    background-color: #ff5f00;
+    color: #ffffff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-outline-success:hover {
+    background-color: #ff7f32;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .navbar-links {
+        display: none;
+        flex-direction: column;
+        background-color: #1a1a1a;
+        width: 100%;
+        text-align: center;
+        padding: 15px;
+        margin-top: 10px;
+    }
+
+    .navbar-links.show {
+        display: flex;
+    }
+
+    .navbar-toggler {
+        display: inline-block;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .toggler-icon {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: #ffffff;
+        margin: 5px 0;
+        border-radius: 2px;
+        transition: transform 0.3s ease;
+    }
+
+    .form-control {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .btn-outline-success {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    }
+/* Section styles */
+.section {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1000px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Blog cards */
+.blog-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.blog-card {
+    background: #e8f5e9;
+    border: 1px solid #c8e6c9;
+    border-radius: 10px;
+    padding: 20px;
+    width: 70%;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.blog-card h3 {
+    margin-top: 0;
+}
+
+/* Video container */
+/* Video Container */
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Ensures responsiveness for smaller screens */
+    margin: 20px 0;
+}
+
+/* Responsive Styles for Smaller Screens */
+@media (max-width: 768px) {
+    .video-container iframe {
+        width: 100%; /* Full width on smaller screens */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+
+
+/* Medicine list */
+.medicine-list {
+    list-style: none;
+    padding: 0;
+}
+
+.medicine-list li {
+    padding: 10px;
+    background: #f1f8e9;
+    margin: 5px 0;
+    border: 1px solid #c8e6c9;
+    border-radius: 5px;
+}
+img{
+    width: 100%;
+}
+
+footer {
+        background: #212529;
+        text-align: center;
+        padding: 10px 0;
+    }
+    
+    footer h5 {
+        color: #ffc107;
+        font-weight: bold;
+    }
+
+    footer p, footer a {
+        color: #adb5bd;
+    }
+
+    footer a:hover {
+        color: #ffc107;
+    }
+
+    @media (max-width: 768px) {
+        .sidebar {
+            width: 100%;
+        }
+    }
+
+    /* Footer Styles */
+footer {
+    background-color: #212529;
+    padding: 20px;
+    margin-top:10px;
+    text-align: center;
+    color: #ffffff;
+}
+
+footer h5 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+footer p {
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+footer a {
+    color: #ffc107;
+    margin: 0 10px;
+    font-size: 1.2rem;
+}
+
+footer a:hover {
+    color: #ff5f00;
+}
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+
+        <a class="navbar-brand" href="#">Health Center</a>
+
+        <div class="navbar-links">
+            <a class="nav-link" href="/">Home</a>
+            <a class="nav-link" href="/about">About</a>
+            <a class="nav-link" href="/contact">Contact</a>
+            <a class="nav-link" href="/developer">Developer</a>
+            <a class="nav-link" href="/medicine">Medicine</a>
+        </div>
+        
+        <form class="navbar-search" role="search">
+            <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn-outline-success" type="submit">Search</button>
+        </form>
+    </nav>
+    
+
+    <section id="about" class="section">
+        <h2>About Ayurveda</h2>
+        <p>Ayurveda, meaning "The Science of Life," is one of the world's oldest holistic healing systems, originating in India more than 3,000 years ago. It is rooted in the belief that health and wellness depend on a delicate balance between the mind, body, and spirit. Unlike modern medicine, which often targets specific symptoms, Ayurveda emphasizes prevention and promotes the use of natural remedies to address the root causes of diseases.</p>
+        <img src="{{ url_for('static', filename='A1.png') }}" alt="Ayurvedic herbs" class="responsive-img">
+
+    </section>
+
+    <section id="blogs" class="section">
+        <h2>Historical Significance</h2>
+        <div class="blog-container">
+            <div class="blog-card">
+                <h3>Ancient Origins: </h3>
+                <p>Ayurveda is mentioned in the Vedas, specifically the Atharvaveda, one of the oldest texts of Indian wisdom.</p>
+                <p>
+                The primary classical texts on Ayurveda are the Charaka Samhita (focused on internal medicine) and Sushruta Samhita (focused on surgery).</p>
+                <p>
+                Over the centuries, Ayurveda has influenced many traditional systems of medicine, including Chinese and Greek medicine.
+                </p>
+            </div>
+            <div class="blog-card">
+                <h3>Core Principles of Ayurveda</h3>
+                <h4>The Five Elements (Pancha Mahabhutas):</h4>
+                <p>Ayurveda describes the universe as composed of five elements: air (Vayu), water (Jala), fire (Agni), earth (Prithvi), and ether (Akasha). These elements form the basis of the human body and are reflected in the doshas.</p>
+                <h4>The Three Doshas:</h4>
+                <ul>
+                    <li><h5>Vata (Air and Ether):</h5>Governs movement, breathing, and circulation</li>
+                    <li><h5>Pitta (Fire and Water):</h5>Regulates metabolism, digestion, and energy.</li>
+                    <li><h5>Kapha (Earth and Water):</h5>Controls growth, structure, and immunity</li>
+                </ul>
+            </div>
+            <div class="blog-card">
+                <h3>Ayurvedic Practices</h3>
+                <ul>
+                    <li><h5>Diet and Nutrition (Ahara):</h5>Eating according to your dosha type, with emphasis on seasonal and local foods.</li>
+                    <li><h5>Lifestyle (Dinacharya):</h5>A daily routine including waking early, yoga, pranayama (breathing exercises), and mindful eating.</li>
+                    <li><h5>Detoxification (Panchakarma):</h5>A five-step therapy to cleanse the body of toxins through treatments like Vamana (therapeutic vomiting) and Basti (medicated enema).
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="videos" class="section">
+        <h2>Informative Videos</h2>
+        <div class="video-container">
+            <iframe width="460" height="315" src="https://youtu.be/NVadP-aso0A?si=Vq5FCgBm5m8CGlX6" title="Basic Of Ayurveda" frameborder="0" allowfullscreen></iframe>
+            <iframe width="460" height="315" src="https://youtu.be/WfN1ZLNzP4A?si=KilBQiIVDKShvJaT" title="Explaination About Doshas" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <section id="medicines" class="section">
+        <h2>Medicinal Products</h2>
+        <p>Explore a wide range of Ayurvedic medicines for various health conditions.</p>
+        <ul class="medicine-list">
+            <li>Triphala Powder</li>
+            <li>Ashwagandha Capsules</li>
+            <li>Chyawanprash</li>
+            <li>Brahmi Oil</li>
+        </ul>
+    </section>
+</body>
+<br>
+<footer>
+    <div class="container">
+        <h5>Health-Assist</h5>
+        <br>
+        <div>
+            <h5>Contact Us</h5>
+            <p>Email: avinashangadi50@gmail.com<br>Phone: +91 8055233650</p>
+        </div>
+        <br>
+        <p>Empowering rural healthcare with technology.</p>
+        <a href="#"><i class="bi bi-twitter"></i></a>
+        <a href="#"><i class="bi bi-facebook"></i></a>
+        <a href="#"><i class="bi bi-instagram"></i></a>
+    </div>
+</footer>
+</html>

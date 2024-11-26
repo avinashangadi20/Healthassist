@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayurvedic Medicines - Holistic Healing</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    color: #333;
+    line-height: 1.6;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #1a1a1a;
+    padding: 15px 30px;
+    border-bottom: 3px solid #ff5f00;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo and Brand */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ff5f00;
+    text-decoration: none;
+}
+
+.navbar-brand:hover {
+    color: #ff7f32;
+}
+
+.navbar-logo {
+    height: 40px;
+    margin-right: 10px;
+}
+
+/* Navbar Links */
+.navbar-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-link {
+    font-size: 1rem;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+h1, h2 {
+    color: #005f3c;
+    text-align: center;
+}
+
+a {
+    color: #00796b;
+    text-decoration: none;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background-color: #ff5f00;
+    color: #ffffff;
+}
+
+/* Search Bar */
+.form-control {
+    padding: 8px 12px;
+    border: 1px solid #ff5f00;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #000000;
+    outline: none;
+    font-size: 1rem;
+}
+
+.form-control::placeholder {
+    color: #888;
+}
+
+.form-control:focus {
+    border: 2px solid #ff7f32;
+}
+
+.btn-outline-success {
+    background-color: #ff5f00;
+    color: #ffffff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-outline-success:hover {
+    background-color: #ff7f32;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .navbar-links {
+        display: none;
+        flex-direction: column;
+        background-color: #1a1a1a;
+        width: 100%;
+        text-align: center;
+        padding: 15px;
+        margin-top: 10px;
+    }
+
+    .navbar-links.show {
+        display: flex;
+    }
+
+    .navbar-toggler {
+        display: inline-block;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .toggler-icon {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: #ffffff;
+        margin: 5px 0;
+        border-radius: 2px;
+        transition: transform 0.3s ease;
+    }
+
+    .form-control {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .btn-outline-success {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    }
+
+
+/* Section styles */
+.section {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section ul {
+    margin: 10px 0;
+    padding: 0;
+    list-style: none;
+}
+
+.section ul li {
+    background: #e8f5e9;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+footer {
+        background: #212529;
+        text-align: center;
+        padding: 10px 0;
+    }
+    
+    footer h5 {
+        color: #ffc107;
+        font-weight: bold;
+    }
+
+    footer p, footer a {
+        color: #adb5bd;
+    }
+
+    footer a:hover {
+        color: #ffc107;
+    }
+
+    @media (max-width: 768px) {
+        .sidebar {
+            width: 100%;
+        }
+    }
+
+/* Footer */
+footer {
+    background-color: #212529;
+    padding: 20px;
+    margin-top:10px;
+    text-align: center;
+    color: #ffffff;
+}
+
+footer h5 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+footer p {
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+footer a {
+    color: #ffc107;
+    margin: 0 10px;
+    font-size: 1.2rem;
+}
+
+footer a:hover {
+    color: #ff5f00;
+}
+.avi {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.avi button {
+    background-color: #ff5f00;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.avi button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.avi button a {
+    color: white;
+    text-decoration: none;
+}
+
+.avi button a:hover {
+    text-decoration: underline;
+}
+.section iframe {
+    display: block;
+    margin: 20px auto; 
+    max-width: 100%; 
+    border: none;
+}
+
+
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <!-- Brand/Logo -->
+        <a class="navbar-brand" href="#">Health Center</a>
+        
+        <!-- Navigation Links -->
+        <div class="navbar-links">
+            <a class="nav-link" href="/">Home</a>
+            <a class="nav-link" href="/about">About</a>
+            <a class="nav-link" href="/contact">Contact</a>
+            <a class="nav-link" href="/developer">Developer</a>
+            <a class="nav-link" href="/medicine">Medicine</a>
+        </div>
+        
+        <!-- Search Bar -->
+        <form class="navbar-search" role="search">
+            <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn-outline-success" type="submit">Search</button>
+        </form>
+    </nav>
+    <div class="avi">
+        <button><a href="#triphala">Triphala Powder</a></button>
+        <button><a href="#ashwagandha">Ashwagandha Capsules</a></button>
+        <button><a href="#chyawanprash">Chyawanprash</a></button>
+        <button><a href="#brahmi">Brahmi Oil</a></button>
+    </div>
+    <main>
+        <!-- Triphala Section -->
+        <section id="triphala" class="section">
+            <h2>Triphala Powder</h2>
+            <p>Triphala is a traditional Ayurvedic herbal preparation made from three fruits: Amalaki, Bibhitaki, and Haritaki. It is renowned for its detoxifying and rejuvenating properties.</p>
+            <ul>
+                <li>Supports digestion and gut health</li>
+                <li>Rich in antioxidants</li>
+                <li>Helps in weight management</li>
+            </ul>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" title="Triphala Benefits" frameborder="0" allowfullscreen></iframe>
+        </section>
+
+        <!-- Ashwagandha Section -->
+        <section id="ashwagandha" class="section">
+            <h2>Ashwagandha Capsules</h2>
+            <p>Ashwagandha is a powerful adaptogen that helps reduce stress and anxiety. It also enhances energy levels and overall vitality.</p>
+            <ul>
+                <li>Boosts immunity</li>
+                <li>Enhances brain function</li>
+                <li>Reduces cortisol levels</li>
+            </ul>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" title="Ashwagandha Benefits" frameborder="0" allowfullscreen></iframe>
+        </section>
+
+        <!-- Chyawanprash Section -->
+        <section id="chyawanprash" class="section">
+            <h2>Chyawanprash</h2>
+            <p>Chyawanprash is a nutritious herbal jam made from Amla and over 50 other herbs. It is a powerful immunity booster and energy enhancer.</p>
+            <ul>
+                <li>Strengthens immunity</li>
+                <li>Improves respiratory health</li>
+                <li>Promotes skin glow and youthfulness</li>
+            </ul>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" title="Chyawanprash Benefits" frameborder="0" allowfullscreen></iframe>
+        </section>
+
+        <!-- Brahmi Oil Section -->
+        <section id="brahmi" class="section">
+            <h2>Brahmi Oil</h2>
+            <p>Brahmi Oil is a traditional Ayurvedic preparation known for its calming effects. It nourishes the scalp and improves memory and focus.</p>
+            <ul>
+                <li>Promotes hair growth</li>
+                <li>Relieves stress and anxiety</li>
+                <li>Enhances memory and concentration</li>
+            </ul>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" title="Brahmi Oil Benefits" frameborder="0" allowfullscreen></iframe>
+        </section>
+    </main>
+
+    <br>
+<footer>
+    <div class="container">
+        <h5>Health-Assist</h5>
+        <br>
+        <div>
+            <h5>Contact Us</h5>
+            <p>Email: avinashangadi50@gmail.com<br>Phone: +91 8055233650</p>
+        </div>
+        <br>
+        <p>Empowering rural healthcare with technology.</p>
+        <a href="#"><i class="bi bi-twitter"></i></a>
+        <a href="#"><i class="bi bi-facebook"></i></a>
+        <a href="#"><i class="bi bi-instagram"></i></a>
+    </div>
+</footer>
+</body>
+</html>
